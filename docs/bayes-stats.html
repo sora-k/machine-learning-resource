@@ -21,12 +21,64 @@
 		</ul>
 	</p>
 </section>
-
+<section>
+	<h2>Probability Mass Function (PMF)</h2>
+	<p>
+		<ul>
+			<li>A map from "values" to "probabilities". </li>
+			<li>For example: rolling dice 
+				<ul>
+					<li>value -> probability
+					<li>1 -> 1/6
+					<li>2 -> 1/6
+					<li>3 -> 1/6
+					<li>4 -> 1/6
+					<li>5 -> 1/6
+					<li>6 -> 1/6
+				</ul>
+		</ul>
+	</p>
+</section>
+<section>
+	<h2>Histogram</h2>
+	<p>
+		<ul>
+			<li>A map from "values" to "frequencies". </li>
+		</ul>
+	</p>
+</section>
+<section>
+	<h2>Confidence</h2>
+	<p>
+		<ul>
+			<li>At the beginning, without any data, lets assume the prior is a uniform distribution.</li>
+			<li>As evidence comes in, update prior confidence as data comes in.</li>
+			<li>For example, determining the probability of getting a head flipping a euro coin. 
+				<ul>
+					<li>Let's say everyone in this room has their own prior assumption.</li>
+					<li>"When you all start out you are all going to be equally confidence of your hypytheses. <br> Let's say there's a thousand points of confidence. (Meaning, each individual hypothesis has a thousand units of confidence.) Everyone gives their hypothesis a thousand point. "</li>
+					<li>"Let's say, the first flip of the coin is head. People with the hypothesis of P(coin-flip = head) < 5 percent,  will update and lower their confidence points."</li>
+				</ul> </li>
+			<li> P(H|E) = P(H)P(E|H) / P(E) </li>
+			<li> Description: 
+				<ul>
+					<li> "Belief about that hypothesis having seen that evidence is going to be proportional to how much did you believe it before, how likely is the evidence if you were right and over how likely is the evidence over all the circumstances at all."
+					</li>
+				</ul>
+			<li> P(H|E) = P(H)P(E|H) : Skip the calcuation of P(E) until the end.</li>
+				<ul>
+					<li>(conf. after each coin toss) = (conf. before)  * (probability of evidence if your hypothesis were right)
+				</ul>
+			<li>Let's say, Evidence = [H, H, T] -> initiali confidence of 1000 for p of 0.25 => conf. = 1000 * (0.25)(0.25)(1 - 0.25)</li>	
+		</ul>
+	</p>
+</section>
 <footer>
 	<h2>Reference</h3>
 	<ul>
 		<li><a href="https://www.youtube.com/watch?v=bobeo5kFz1g">Bayesian statistics made (as) simple (as possible)</a>--> <a href="https://sites.google.com/site/simplebayes/home/pycon-2012">slide/code</a></li>
 		<li><a href="https://github.com/sora-k/machine-learning-resource/tree/master/bayesian-statistics/bayes_tutorial">code in repo</a></li>
+		<li><a href="http://www.inference.phy.cam.ac.uk/itprnn/book.pdf">MacKay, Information Theory, Inference, and Learning Algorithms</a></li>
 	</ul>
 </footer>
 </body>
